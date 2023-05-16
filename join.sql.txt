@@ -1,0 +1,31 @@
+1.
+
+select a.city , b.country from city a
+inner join country b
+on a.country_id = b.country_id
+
+2.
+
+select p.payment_id , c.first_name, c.last_name from customer c
+INNER JOIN payment p
+USING (customer_id)
+
+--OR
+
+select p.payment_id , c.first_name, c.last_name from customer c
+INNER JOIN payment p
+ON p.customer_id = c.customer_id
+
+3.
+
+SELECT r.rental_id , c.first_name , c.last_name FROM customer c 
+INNER JOIN rental r 
+on r.customer_id = c.customer_id
+
+
+--OR 
+
+SELECT r.rental_id , c.first_name , c.last_name FROM customer c 
+INNER JOIN rental r 
+USING (customer_id)
+
